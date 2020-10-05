@@ -18,8 +18,8 @@ class UserFactory extends Factory
     /**
      * Define the model's default state.
      *
-     * @return array
-     */
+     * @return array //User::all()->pluck('name'); para mostrar todos los usuarios
+     */ //\App\Models\User::factory()->count(3)->create(); para crear desde tinker 3 usuarios de prueba con la factory
     public function definition()
     {
         return [

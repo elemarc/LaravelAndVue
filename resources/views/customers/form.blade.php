@@ -11,7 +11,7 @@
         <div class="form-group">
             <input type="text" name="email" value="{{old('email') ?? $customer->email}}" class="form-control">
         </div>
-        <div class="text-danger">{{ $errors->first('email')}}</div> <!-- le pido a laravel que me muestre el primer error de name, si lo hay -->
+        <div class="text-danger">{{ $errors->first('email')}}</div> <!-- le pido a laravel que me muestre el primer error de email, si lo hay -->
         
         <div class="form-group">
             <label for="active">Status:</label>
@@ -36,4 +36,9 @@
             </select>
         </div>
 
+        <div class="form-group d-flex flex-column">
+            <label for="image"> Profile Image </label>
+            <input name="image" type="file" class="py-2">
+            <div class="text-danger">{{ $errors->first('image')}}</div> <!-- le pido a laravel que me muestre el primer error de image, si lo hay -->
+        </div>
         @csrf

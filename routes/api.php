@@ -19,4 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::post('vue', 'App\Http\Controllers\TestingVueController@index'); //ACUERDATE DE PONER LA RUTA COMPLETA TONTO!!!
+Route::post('vue', 'App\Http\Controllers\TestingVueController@index'); //hago la ruta para el controller de vue

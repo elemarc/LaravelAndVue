@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -13,10 +14,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                        <my-button texto ="My New Text Button" type="submit"> <!-- pongo el componente creado con vue --> </my-button>
+                        <my-button texto ="My New Text Button" tipo="submit"> <!-- pongo el componente creado con vue --> </my-button>
                 </div>
             </div>
         </div>
-    </div>
 </div>
 @endsection

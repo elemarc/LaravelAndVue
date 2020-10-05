@@ -11,7 +11,8 @@
 
 <div class="row">
     <div class="col-12">
-        <form action="{{route('customers.update',['customer' => $customer->id])}}" method="POST" > <!-- esablece el 'customer' de la ruta customers.$'customer' como el que le paso -->
+        <form action="{{route('customers.update',['customer' => $customer->id])}}" method="POST" enctype="multipart/form-data" ><!-- esto ultimo es el cifrado necesario para subir imagenes y ficheros -->
+            <!-- esablece el 'customer' de la ruta customers.$'customer' como el que le paso -->
             <!-- como HTTP solo tiene GET y POST, se añade PATCH o PUT (son lo mismo) desde un method de laravel-->
             @method('PATCH')
             @include('customers.form')<!-- mito el form-->

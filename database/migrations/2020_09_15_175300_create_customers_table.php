@@ -19,7 +19,9 @@ class CreateCustomersTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->integer('active');
+            $table->string('image')->nullable();//hago que no sea obligatorio ponerse pfp
             $table->timestamps();
+            
         });
     }
 

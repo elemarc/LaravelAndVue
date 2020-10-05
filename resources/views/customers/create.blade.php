@@ -11,7 +11,7 @@
 
 <div class="row">
     <div class="col-12">
-        <form action="/customers" method="POST" >
+        <form action="/customers" method="POST" enctype="multipart/form-data" ><!-- esto ultimo es el cifrado necesario para subir imagenes y ficheros -->
             @include('customers.form')<!-- mito el form-->
         <button type="submit" class="btn btn-primary">Add Customer</button>
     

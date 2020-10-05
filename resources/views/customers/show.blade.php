@@ -17,13 +17,23 @@
         <p><strong> Company: </strong>{{$customer->company->name}} </p>
         <p><strong> Status: </strong>{{$customer->active}} </p>
     </div>
-    <div>
+    @can('delete', $customer) <!--recordatorio que aqui se pasa el customer especifico ya que se actua sobre el -->
+    <div> 
         <form action="/customers/{{$customer->id}}"method="POST">
         @method('DELETE')
         @csrf
         <button type="submit" class="btn btn-danger">Delete</button>
         </form>
     </div>
+    @endcan
 </div>
+
+@if($customer->image)<!--si el customer tiene una imagen de perfil la muestra-->
+    <div class="row">
+        <div class="col-12">
+            <image src="{{asset('storage/' . $customer->image)}}" class="img-thumbnail"></image> <!-- asset localizado en storage y su nombre de imagen (linkead al user ya que se ha guardado con ese nombre al subirla)
+        </div>
+    </div>
+@endif
 
 @endsection

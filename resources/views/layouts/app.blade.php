@@ -25,6 +25,11 @@
 
         <main class="py-4">
             <div class="container"> <!--meto el contenido dentro de un container para que bootstrap ponga bien los bordes y todo-->
+                @if(session()->has('message')) <!-- si la sesion recibe un mensaje, crea el siguiente div-->
+                <div class="alert alert-success" role="alert">
+                    {{session()->get('message')}}
+                </div>
+                @endif
                 @yield('content')
             </div>
         </main>

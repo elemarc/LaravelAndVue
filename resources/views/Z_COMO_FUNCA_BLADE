@@ -1,0 +1,5 @@
+esta el archivo layouts/app
+
+Este archivo se incluye con el @extends('layouts.app') en todas las paginas, y contiene los datos y todo lo que tienen que tener en comun las paginas (por ejemplo, la navbar)
+De este modo, cada vez que cargas una pagina, se carga el layout, y la navbar que esta incluida en este.
+Ademas es donde se importan todos los scripts, bootstrap etc. (en este proyecto este ultimo no porque viene instalado con laravel)
